@@ -47,16 +47,16 @@ export class AuthService {
 
   }
 
-  generateUsernameTok(): string | null {
-    const token = localStorage.getItem('token');
+  // generateUsernameTok(): string | null {
+  //   const token = localStorage.getItem('token');
 
-    if (token) {
-      const decodedToken: any = jwtDecode(token);
-      return decodedToken.username || null;
-    }
+  //   if (token) {
+  //     const decodedToken: any = jwtDecode(token);
+  //     return decodedToken.username || null;
+  //   }
 
-    return null;
-  }
+  //   return null;
+  // }
 
   // getter
 

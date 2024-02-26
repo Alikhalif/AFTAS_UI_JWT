@@ -14,12 +14,18 @@ export class CustomInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const token = localStorage.getItem('token');
-    const newCloneRequest = request.clone({
-      setHeaders:{
-        Authorization: `Bearer ${token}`
-      }
-    })
-    return next.handle(newCloneRequest);
+    if(token != null){
+      const newCloneRequest = request.clone({
+        setHeaders:{
+          Authorization: `Bearer ${token}`
+        }
+      })
+      return next.handle(newCloneRequest);
+    }
+    else{
+      return next.handle(request);
+    }
+
   }
 
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Services/Auth/auth.service';
 
 @Component({
@@ -8,23 +9,25 @@ import { AuthService } from 'src/app/Services/Auth/auth.service';
 })
 export class HeaderComponent {
 
-  constructor( private authService: AuthService){}
+  constructor( private authService: AuthService, private router: Router){}
 
-  // isLoggedIn = false;
-  // isAdmin = false;
-  // isJury = false;
-  // isMember = false;
+  isLoggedIn = false;
+  isAdmin = false;
+  isJury = false;
+  isMember = false;
 
   ngOnInit(){
-    // this.isLoggedIn = this.authService.isLoggedIn();
-    // this.isJury = this.authService.isJury();
-    // this.isAdmin =  this.authService.isAdmin();
-    // this.isMember = this.authService.isMemeber();
+    this.isLoggedIn = this.authService.isLoggedIn();
+    this.isJury = this.authService.isJury();
+    this.isAdmin =  this.authService.isAdmin();
+    this.isMember = this.authService.isMemeber();
   }
 
-  // logout() {
-  //   this.authService.logout();
-  // }
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('/auth/login');
+
+  }
 
 
 }

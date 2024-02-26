@@ -46,9 +46,9 @@ import { CustomInterceptor } from './Interceptor/custom.interceptor';
     BrowserAnimationsModule
   ],
   providers: [
-    DatePipe, {
-      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 1300}
-    },
+    // DatePipe, {
+    //   provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 1300}
+    // },
 
     {
       provide: HTTP_INTERCEPTORS,

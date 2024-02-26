@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-
   constructor(private httpClient:HttpClient) { }
 
   register(inputData: Object){
