@@ -1,0 +1,68 @@
+<div>
+
+<!-- Navigation Bar -->
+  <!-- component -->
+  <header class="header fixed w-full top-0 z-10 bg-white shadow-md flex items-center justify-between px-8 py-02">
+    <!-- logo -->
+    <!-- <h1 class=""> -->
+        <a routerLink="/">
+          <img src="/assets/upload/AFTAS_LOGO.png" width="150" alt="">
+        </a>
+    <!-- </h1> -->
+
+    <!-- navigation -->
+    <nav class="nav font-semibold text-lg">
+        <ul class="flex items-center">
+            <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer active">
+              <a routerLink="/">Home</a>
+            </li>
+            <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer">
+              <a routerLink="/compitition-list">Compitition</a>
+            </li>
+            <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer">
+              <a routerLink="/compitition-start">Hunting</a>
+            </li>
+            <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer">
+              <a routerLink="/member-list">Member</a>
+            </li>
+            <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer">
+              <a href="">Ranking</a>
+            </li>
+            <!-- <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer">
+              <a href="">Fish</a>
+            </li>
+            <li class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer">
+              <a href="">Level</a>
+            </li> -->
+
+
+        </ul>
+    </nav>
+
+    <!-- buttons --->
+    <div class="flex">
+      <a routerLink="/auth/login" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center mr-4">
+        <i class="fas fa-sign-in-alt mr-2"></i> Login
+      </a>
+
+      <a routerLink="/auth/register" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded flex items-center">
+        <i class="fas fa-user-plus mr-2"></i> S'inscrire
+      </a>
+    </div>
+  </header>
+
+
+  <div class="">
+    <ng-content></ng-content>
+  </div>
+
+
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <div class="container mx-auto">
+      &copy; 2023 Professional Home. All rights reserved.
+    </div>
+  </footer>
+
+
+</div>
+

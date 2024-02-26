@@ -1,0 +1,72 @@
+
+
+<div >
+  <div class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50" *ngIf="showPopup">
+
+    <form (submit)="submitForm()" class="w-1/3 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl font-bold mb-4">Add Member</h2>
+
+
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          name
+        </label>
+        <input [(ngModel)]="myMember.name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="name">
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-2">
+        <div class="mb-4 w-full md:w-1/2 px-3 md:mb-0">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            family name
+          </label>
+          <input [(ngModel)]="myMember.familyName" name="familyName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="familyName" type="text" placeholder="family name">
+        </div>
+        <div class="mb-6 w-full md:w-1/2 px-3 md:mb-0">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            accession date
+          </label>
+          <input [(ngModel)]="myMember.accessionDate" name="accessionDate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="accessionDate" type="date" placeholder="accessionDate">
+        </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-2">
+        <div class="mb-4 w-full md:w-1/2 px-3 md:mb-0">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            nationality
+          </label>
+          <input [(ngModel)]="myMember.nationality" name="nationality" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nationality" type="text" placeholder="nationality">
+        </div>
+
+        <div class="mb-6 w-full md:w-1/2 px-3 md:mb-0">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            identity document
+          </label>
+
+          <select [(ngModel)]="myMember.identityDocument" name="identityDocument" id="identityDocument" class="shadow rounded w-full p-2 mb-6 text-sm text-gray-700 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-500">
+            <option selected>Choose a type</option>
+            <option value="CIN">CIN</option>
+            <option value="CARTE_RESIDENCE">CARTE RESIDENCE</option>
+            <option value="PASSPORT">PASSPORT</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="mb-6 w-full ">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          identityNumber
+        </label>
+        <input [(ngModel)]="myMember.identityNumber" name="identityNumber" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="identityNumber" type="text" placeholder="identity number">
+      </div>
+
+      <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Add
+        </button>
+        <button (click)="closePopup()" type="button" class="bg-gray-500 hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Close</button>
+
+      </div>
+
+    </form>
+  </div>
+</div>
